@@ -12,21 +12,23 @@
 <meta property="og:locale" content="en_BB">
 <meta name="twitter:card" content="summary">
 
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2112261F'/%3E%3Ctext x='32' y='41' font-family='Georgia' font-size='24' font-weight='700' fill='%23D7A73B' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230D0D0D'/%3E%3Ctext x='32' y='41' font-family='Georgia' font-size='24' font-weight='700' fill='%23B08D57' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
 
 :root{
-  --ink:#0F1C16;
-  --forest:#12261F;
-  --forest-mid:#24463A;
-  --sand:#F3F0E7;
-  --paper:#FAF8F2;
-  --gold:#C9962F;
-  --gold-dark:#A97B25;
-  --line: rgba(15,28,22,0.14);
-  --muted: rgba(15,28,22,0.62);
+  --ink:#0D0D0D;
+  --charcoal:#1C1C1E;
+  --espresso:#2A2019;
+  --umber:#4A3324;
+  --slate:#6B6965;
+  --paper:#F7F4EC;
+  --sand:#EEE8DA;
+  --gold:#B08D57;
+  --gold-dark:#8C6E42;
+  --line: rgba(13,13,13,0.14);
+  --muted: rgba(13,13,13,0.60);
 }
 
 *{box-sizing:border-box; margin:0; padding:0;}
@@ -41,7 +43,7 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-h1,h2,h3{ font-family:'Source Serif 4', serif; font-weight:600; letter-spacing:-0.01em; }
+h1,h2,h3{ font-family:'Fraunces', serif; font-weight:500; letter-spacing:-0.01em; }
 .mono{ font-family:'IBM Plex Mono', monospace; }
 a{ color:inherit; }
 
@@ -57,7 +59,7 @@ a{ color:inherit; }
 
 header{
   position:sticky; top:0; z-index:50;
-  background:rgba(250,248,242,0.94);
+  background:rgba(247,244,236,0.94);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
@@ -69,119 +71,106 @@ nav{
 
 .mark{
   display:flex; align-items:center; justify-content:center;
-  width:38px; height:38px; border-radius:9px;
-  background:var(--forest); color:var(--gold);
-  font-family:'Source Serif 4', serif; font-weight:600; font-size:1.05rem;
+  width:38px; height:38px; border-radius:8px;
+  background:var(--ink); color:var(--gold);
+  font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem;
   text-decoration:none; flex-shrink:0;
 }
 
 .navlinks{ display:flex; gap:28px; list-style:none; }
 .navlinks a{
   text-decoration:none; font-size:0.9rem; font-weight:500;
-  color:var(--ink); opacity:0.68; transition:opacity 0.2s;
+  color:var(--ink); opacity:0.62; transition:opacity 0.2s;
 }
 .navlinks a:hover{ opacity:1; }
 
 .nav-cta{
-  background:var(--forest); color:var(--paper);
-  padding:9px 18px; border-radius:7px;
+  background:var(--ink); color:var(--paper);
+  padding:9px 18px; border-radius:6px;
   font-size:0.86rem; font-weight:600; text-decoration:none; white-space:nowrap;
 }
-.nav-cta:hover{ background:var(--ink); }
+.nav-cta:hover{ background:var(--espresso); }
 
 /* ---------- HERO ---------- */
 
 .hero{
   position:relative;
-  padding:88px 28px 84px;
-  background:var(--forest);
+  padding:96px 28px 88px;
+  background:var(--ink);
   color:var(--paper);
-  border-bottom:3px solid var(--gold);
+  overflow:hidden;
 }
 
 .hero-inner{ max-width:1040px; margin:0 auto; position:relative; }
 
-.label{
-  display:inline-flex; align-items:center; gap:9px;
-  font-size:0.86rem; font-weight:500;
-  color:rgba(250,248,242,0.8);
-  margin-bottom:22px;
-}
-.label::before{
-  content:""; width:6px; height:6px;
-  background:var(--gold); display:inline-block; flex-shrink:0;
+.hero-eyebrow{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem; letter-spacing:0.02em;
+  color:var(--gold);
+  margin-bottom:26px;
 }
 
 h1{
-  font-size:clamp(1.9rem, 3.4vw, 2.6rem);
-  line-height:1.25;
-  font-weight:600;
-  max-width:20ch;
-  margin-bottom:22px;
+  font-size:clamp(2rem, 3.6vw, 2.85rem);
+  line-height:1.22;
+  font-weight:500;
+  max-width:19ch;
+  margin-bottom:24px;
 }
-h1 .accent{ color:var(--gold); }
+h1 em{ font-style:italic; color:var(--gold); font-weight:400; }
 
 .hero-sub{
-  font-size:1.02rem;
-  color:rgba(250,248,242,0.8);
-  max-width:46ch;
-  margin-bottom:34px;
+  font-size:1.04rem;
+  color:rgba(247,244,236,0.72);
+  max-width:44ch;
+  margin-bottom:36px;
 }
 
 .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
 
 .btn{
   display:inline-block; text-decoration:none; font-weight:600;
-  font-size:0.9rem; padding:12px 22px; border-radius:7px;
+  font-size:0.9rem; padding:12px 22px; border-radius:6px;
   transition:transform 0.15s, background 0.2s;
 }
 .btn-primary{ background:var(--gold); color:var(--ink); }
 .btn-primary:hover{ background:var(--gold-dark); }
-.btn-ghost{ border:1.5px solid rgba(250,248,242,0.35); color:var(--paper); }
+.btn-ghost{ border:1.5px solid rgba(247,244,236,0.3); color:var(--paper); }
 .btn-ghost:hover{ border-color:var(--paper); }
-.btn-dark{ background:var(--forest); color:var(--paper); }
-.btn-dark:hover{ background:var(--ink); }
+.btn-dark{ background:var(--ink); color:var(--paper); }
+.btn-dark:hover{ background:var(--espresso); }
 
-/* thin geometric accent instead of gradient orb */
-.hero-mark{
-  position:absolute;
-  right:28px;
-  top:50%;
-  transform:translateY(-50%);
-  width:220px;
-  height:220px;
-  border:1px solid rgba(201,150,47,0.35);
-  border-radius:50%;
-  display:flex; align-items:center; justify-content:center;
+/* editorial grain texture instead of decorative rings */
+.hero-texture{
+  position:absolute; right:-60px; top:-40px; bottom:-40px; width:46%;
+  background:
+    linear-gradient(135deg, var(--espresso) 0%, var(--ink) 60%);
+  clip-path: polygon(38% 0, 100% 0, 100% 100%, 12% 100%);
+  opacity:0.9;
 }
-.hero-mark::before{
+.hero-texture::after{
   content:"";
-  width:140px; height:140px;
-  border:1px solid rgba(201,150,47,0.5);
-  border-radius:50%;
+  position:absolute; inset:0;
+  background-image: repeating-linear-gradient(115deg, rgba(176,141,87,0.07) 0px, rgba(176,141,87,0.07) 1px, transparent 1px, transparent 34px);
 }
-@media (max-width:980px){ .hero-mark{ display:none; } }
+@media (max-width:980px){ .hero-texture{ display:none; } }
 
 /* ---------- SECTIONS ---------- */
 
-section{ padding:80px 0; scroll-margin-top:84px; }
+section{ padding:84px 0; scroll-margin-top:84px; }
 .section-alt{ background:var(--sand); }
 
-.label-sm{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:0.82rem; font-weight:600; color:var(--forest-mid);
-  margin-bottom:14px;
-}
-.label-sm::before{
-  content:""; width:6px; height:6px;
-  background:var(--gold); display:inline-block;
+.section-tag{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.76rem; color:var(--slate);
+  margin-bottom:16px;
 }
 
 h2{
-  font-size:clamp(1.4rem, 2.2vw, 1.8rem);
-  font-weight:600;
+  font-size:clamp(1.5rem, 2.3vw, 1.95rem);
+  font-weight:500;
   max-width:22ch;
-  margin-bottom:18px;
+  margin-bottom:20px;
   line-height:1.3;
 }
 
@@ -202,21 +191,20 @@ h2{
 .point-list li{ padding:18px 0; border-top:1px solid var(--line); }
 .point-list li:last-child{ border-bottom:1px solid var(--line); }
 .point-list strong{
-  display:block; font-family:'Source Serif 4', serif; font-weight:600;
+  display:block; font-family:'Fraunces', serif; font-weight:500;
   font-size:1rem; margin-bottom:4px;
 }
 .point-list span{ color:var(--muted); font-size:0.92rem; }
 
 /* ---------- WHY-I-BUILD ---------- */
 
-.philosophy{ background:var(--ink); color:var(--paper); }
-.philosophy .label-sm{ color:var(--gold); }
-.philosophy .label-sm::before{ background:var(--gold); }
+.philosophy{ background:var(--espresso); color:var(--paper); }
+.philosophy .section-tag{ color:var(--gold); }
 .philosophy h2{ color:var(--paper); max-width:none; }
-.philosophy p{ color:rgba(250,248,242,0.75); }
+.philosophy p{ color:rgba(247,244,236,0.72); }
 .philosophy .btn-primary{ margin-top:8px; }
 
-/* ---------- PROCESS: path style ---------- */
+/* ---------- PROCESS: path style (numbered - genuinely sequential) ---------- */
 
 .path{ margin-top:44px; display:flex; flex-direction:column; }
 .path-item{
@@ -228,41 +216,40 @@ h2{
   width:1px; background:var(--line);
 }
 .path-num{
-  width:34px; height:34px; border-radius:7px;
-  background:var(--forest); color:var(--gold);
+  width:34px; height:34px; border-radius:6px;
+  background:var(--ink); color:var(--gold);
   display:flex; align-items:center; justify-content:center;
   font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight:500;
   flex-shrink:0;
 }
-.path-item h3{ font-size:1.02rem; margin-bottom:5px; }
+.path-item h3{ font-size:1.05rem; margin-bottom:5px; }
 .path-item p{ color:var(--muted); font-size:0.94rem; max-width:52ch; }
 
 /* ---------- WORK ---------- */
 
 .work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:38px; }
-.work-card{ background:var(--paper); border-radius:10px; overflow:hidden; border:1px solid var(--line); }
-.work-thumb{ height:150px; background:var(--forest); position:relative; border-bottom:2px solid var(--gold); }
-.work-thumb.alt{ background:var(--forest-mid); }
-.work-body{ padding:22px; }
-.tag{ display:inline-block; font-size:0.76rem; font-weight:600; color:var(--forest-mid); margin-bottom:10px; }
-.work-body h3{ font-size:1.08rem; margin-bottom:8px; }
+.work-card{ background:var(--paper); border-radius:8px; overflow:hidden; border:1px solid var(--line); }
+.work-thumb{ height:150px; background:var(--ink); position:relative; }
+.work-thumb.alt{ background:var(--umber); }
+.work-body{ padding:24px; }
+.tag{ display:block; font-family:'IBM Plex Mono', monospace; font-size:0.74rem; color:var(--slate); margin-bottom:10px; }
+.work-body h3{ font-size:1.1rem; margin-bottom:8px; }
 .work-body p{ color:var(--muted); font-size:0.93rem; }
 
 .testimonial-card{
-  background:var(--forest); color:var(--paper);
-  border-radius:12px; padding:38px 42px; margin-top:38px;
-  border-left:3px solid var(--gold);
+  background:var(--ink); color:var(--paper);
+  border-radius:10px; padding:40px 44px; margin-top:38px;
 }
 .testimonial-card blockquote{
-  font-family:'Source Serif 4', serif; font-style:italic; font-weight:400;
-  font-size:1.12rem; line-height:1.55; max-width:60ch; margin-bottom:16px;
+  font-family:'Fraunces', serif; font-style:italic; font-weight:400;
+  font-size:1.15rem; line-height:1.55; max-width:60ch; margin-bottom:18px;
 }
-.testimonial-card cite{ font-size:0.84rem; color:rgba(250,248,242,0.6); }
+.testimonial-card cite{ font-size:0.84rem; color:var(--slate); font-style:normal; }
 
 /* ---------- PRICING ---------- */
 
 .price-card{
-  background:var(--paper); border:1.5px solid var(--forest); border-radius:12px;
+  background:var(--paper); border:1.5px solid var(--ink); border-radius:10px;
   padding:40px; margin-top:36px;
   display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap;
 }
@@ -271,36 +258,35 @@ h2{
 
 /* ---------- CONTACT ---------- */
 
-.contact-section{ background:var(--forest); color:var(--paper); border-top:3px solid var(--gold); }
+.contact-section{ background:var(--ink); color:var(--paper); }
 .contact-inner{ text-align:left; max-width:620px; margin:0 auto; }
 .contact-inner h2{ color:var(--paper); }
-.contact-inner .lede{ color:rgba(250,248,242,0.75); margin:0 0 30px; }
-.contact-inner .label-sm{ color:var(--gold); }
-.contact-inner .label-sm::before{ background:var(--gold); }
+.contact-inner .lede{ color:rgba(247,244,236,0.72); margin:0 0 30px; }
+.contact-inner .section-tag{ color:var(--gold); }
 
 .contact-methods{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:34px; }
 
 .contact-form{
-  background:rgba(250,248,242,0.05); border:1px solid rgba(250,248,242,0.16);
-  border-radius:12px; padding:28px; display:flex; flex-direction:column; gap:14px;
+  background:rgba(247,244,236,0.05); border:1px solid rgba(247,244,236,0.14);
+  border-radius:10px; padding:28px; display:flex; flex-direction:column; gap:14px;
 }
 .contact-form label{ font-size:0.82rem; font-weight:600; margin-bottom:5px; display:block; }
 .contact-form input, .contact-form textarea{
-  width:100%; padding:11px 13px; border-radius:7px;
-  border:1px solid rgba(250,248,242,0.22);
-  background:rgba(250,248,242,0.07);
+  width:100%; padding:11px 13px; border-radius:6px;
+  border:1px solid rgba(247,244,236,0.2);
+  background:rgba(247,244,236,0.06);
   font-family:'Inter', sans-serif; font-size:0.96rem; color:var(--paper);
 }
-.contact-form input::placeholder, .contact-form textarea::placeholder{ color:rgba(250,248,242,0.4); }
+.contact-form input::placeholder, .contact-form textarea::placeholder{ color:rgba(247,244,236,0.38); }
 .contact-form input:focus, .contact-form textarea:focus{ outline:none; border-color:var(--gold); }
 .contact-form textarea{ resize:vertical; min-height:100px; }
 .contact-form button{ align-self:flex-start; border:none; cursor:pointer; }
 
 .form-divider{
   display:flex; align-items:center; gap:12px; margin:28px 0;
-  color:rgba(250,248,242,0.4); font-size:0.82rem;
+  color:rgba(247,244,236,0.35); font-size:0.82rem;
 }
-.form-divider::before, .form-divider::after{ content:""; flex:1; height:1px; background:rgba(250,248,242,0.18); }
+.form-divider::before, .form-divider::after{ content:""; flex:1; height:1px; background:rgba(247,244,236,0.16); }
 
 footer{
   padding:32px 28px; text-align:center; color:var(--muted); font-size:0.82rem;
@@ -308,7 +294,7 @@ footer{
 }
 .footer-social{ display:flex; justify-content:center; gap:18px; margin-bottom:12px; }
 .footer-social a{ color:var(--muted); text-decoration:none; font-weight:500; font-size:0.82rem; }
-.footer-social a:hover{ color:var(--forest-mid); }
+.footer-social a:hover{ color:var(--ink); }
 
 /* ---------- MOBILE ---------- */
 
@@ -319,7 +305,7 @@ footer{
   .work-grid{ grid-template-columns:1fr; }
   .navlinks{ display:none; }
   .price-card{ flex-direction:column; align-items:flex-start; }
-  .testimonial-card{ padding:28px 24px; }
+  .testimonial-card{ padding:30px 26px; }
   .contact-form{ padding:22px; }
 }
 </style>
@@ -345,10 +331,10 @@ footer{
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-mark" aria-hidden="true"></div>
+    <div class="hero-texture" aria-hidden="true"></div>
     <div class="hero-inner">
-      <span class="label">Freelance web design, Barbados</span>
-      <h1>Websites built around how customers <span class="accent">actually behave</span>.</h1>
+      <div class="hero-eyebrow">Freelance web design — Barbados</div>
+      <h1>Websites built around how customers <em>actually behave</em>.</h1>
       <p class="hero-sub">
         I design and build sites for Barbadian businesses that want more than a template. 
         My background is in data analysis and social science, and it shapes how I build: every page is designed around what actually gets your customers to act.
@@ -363,8 +349,7 @@ footer{
   <!-- CREDIBILITY QUOTE -->
   <section id="why-it-matters">
     <div class="wrap" style="max-width:660px; margin:0 auto; text-align:left;">
-      <span class="label-sm">Why this matters</span>
-      <h2 style="font-style:italic; font-weight:500; font-size:1.35rem; max-width:none;">
+      <h2 style="font-style:italic; font-weight:400; font-size:1.4rem; max-width:none;">
         "&hellip;your central authority hub, your credibility anchor, your conversion engine&hellip;"
       </h2>
       <p style="font-size:0.88rem; color:var(--muted); margin-bottom:24px;">
@@ -381,8 +366,8 @@ footer{
   <!-- WHY I BUILD THIS WAY -->
   <section class="philosophy">
     <div class="wrap" style="max-width:660px; margin:0 auto;">
-      <span class="label-sm">Why I build websites this way</span>
-      <h2 style="font-size:1.5rem;">Most people design a website to look good. I design mine to convert.</h2>
+      <div class="section-tag">Why I build websites this way</div>
+      <h2 style="font-size:1.55rem;">Most people design a website to look good. I design mine to convert.</h2>
       <p style="margin-bottom:16px; font-size:0.98rem;">
         The moment someone lands on your page, they're deciding whether to trust
         you or leave. I come from data and social science, and I've spent years
@@ -407,7 +392,7 @@ footer{
   <!-- APPROACH -->
   <section id="approach">
     <div class="wrap">
-      <span class="label-sm">My approach</span>
+      <div class="section-tag">My approach</div>
       <h2>Design decisions, backed by how people behave</h2>
       <div class="editorial">
         <div class="editorial-copy">
@@ -445,7 +430,7 @@ footer{
   <!-- WHY A WEBSITE -->
   <section id="why-website" class="section-alt">
     <div class="wrap">
-      <span class="label-sm">Why have a website?</span>
+      <div class="section-tag">Why have a website?</div>
       <h2>Instagram can bring people to your business. A website gives them somewhere to go.</h2>
       <div class="editorial reverse">
         <ul class="point-list editorial-aside">
@@ -491,7 +476,7 @@ footer{
   <!-- PROCESS -->
   <section id="process">
     <div class="wrap">
-      <span class="label-sm">How a project runs</span>
+      <div class="section-tag">How a project runs</div>
       <h2>Four stages, start to launch</h2>
       <p class="lede">A straightforward process so you always know what's next and what it costs.</p>
 
@@ -519,7 +504,7 @@ footer{
   <!-- HOW I WORK -->
   <section id="work" class="section-alt">
     <div class="wrap">
-      <span class="label-sm">How I approach a project</span>
+      <div class="section-tag">How I approach a project</div>
       <h2>How I'd think through yours</h2>
       <p class="lede">Not a client list. A look at the questions that shape every build, using two common Barbados business types as examples.</p>
 
@@ -527,7 +512,7 @@ footer{
         <div class="work-card">
           <div class="work-thumb"></div>
           <div class="work-body">
-            <span class="tag">Example: guesthouse site</span>
+            <span class="tag">Example — guesthouse site</span>
             <h3>What does a visitor need first?</h3>
             <p>Most visitors want availability and price before anything else, so those sit above the founder's story, not below it.</p>
           </div>
@@ -535,28 +520,18 @@ footer{
         <div class="work-card">
           <div class="work-thumb alt"></div>
           <div class="work-body">
-            <span class="tag">Example: local restaurant site</span>
+            <span class="tag">Example — local restaurant site</span>
             <h3>What's the one action?</h3>
             <p>A menu, a phone number, a way to book: every page gets one clear next step.</p>
           </div>
         </div>
       </div>
-
-      <div class="testimonial-card">
-        <blockquote>
-          "Sarah-Jane asked more questions about our guests than about our
-          colour scheme, and it showed. The new site actually gets people
-          to check availability instead of just scrolling past."
-        </blockquote>
-        <cite>Placeholder testimonial. Swap in a real quote once your first project wraps.</cite>
-      </div>
-    </div>
   </section>
 
   <!-- PRICING -->
   <section id="pricing">
     <div class="wrap">
-      <span class="label-sm">Pricing</span>
+      <div class="section-tag">Pricing</div>
       <h2>Project-based, scoped to what you need</h2>
       <div class="price-card">
         <div>
@@ -571,7 +546,7 @@ footer{
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <div class="wrap contact-inner">
-      <span class="label-sm">Get in touch</span>
+      <div class="section-tag">Get in touch</div>
       <h2>Tell me about your business</h2>
       <p class="lede">Send a message with what you're looking for, and I'll get back to you with next steps.</p>
 
