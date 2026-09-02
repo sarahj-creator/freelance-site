@@ -3,19 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SJ Web Design, Barbados</title>
 
 <meta name="description" content="Freelance web design for Barbados businesses. Sites built around how customers actually behave, not just how the page looks, grounded in data and behavioural analysis.">
+
 <meta property="og:title" content="SJ Web Design, Barbados">
 <meta property="og:description" content="Websites for Barbados businesses, designed around how customers actually use them, not just how they look.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_BB">
+
 <meta name="twitter:card" content="summary">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230D0D0D'/%3E%3Ctext x='32' y='41' font-family='Georgia' font-size='24' font-weight='700' fill='%23B08D57' text-anchor='middle'%3ESJ%3C/text%3E%3C/svg%3E">
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=IBM+Plex+Mono:wght@500&family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
   --ink:#0D0D0D;
@@ -27,12 +31,19 @@
   --sand:#EEE8DA;
   --gold:#B08D57;
   --gold-dark:#8C6E42;
-  --line: rgba(13,13,13,0.14);
-  --muted: rgba(13,13,13,0.60);
+  --line:rgba(13,13,13,0.14);
+  --muted:rgba(13,13,13,0.60);
 }
 
-*{box-sizing:border-box; margin:0; padding:0;}
-html{scroll-behavior:smooth;}
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
 
 body{
   background:var(--paper);
@@ -43,53 +54,112 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 
-h1,h2,h3{ font-family:'Fraunces', serif; font-weight:500; letter-spacing:-0.01em; }
-.mono{ font-family:'IBM Plex Mono', monospace; }
-a{ color:inherit; }
+/* ---------- TYPOGRAPHY ---------- */
 
-:focus-visible{ outline:2.5px solid var(--gold); outline-offset:3px; }
-
-@media (prefers-reduced-motion: reduce){
-  *{ animation:none !important; transition:none !important; scroll-behavior:auto !important; }
+h1,
+h2,
+h3{
+  font-family:'DM Serif Display', serif;
+  font-weight:400;
+  letter-spacing:-0.01em;
 }
 
-.wrap{ max-width:1040px; margin:0 auto; padding:0 28px; }
+.mono{
+  font-family:'IBM Plex Mono', monospace;
+}
+
+a{
+  color:inherit;
+}
+
+:focus-visible{
+  outline:2.5px solid var(--gold);
+  outline-offset:3px;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+.wrap{
+  max-width:1040px;
+  margin:0 auto;
+  padding:0 28px;
+}
 
 /* ---------- NAV ---------- */
 
 header{
-  position:sticky; top:0; z-index:50;
+  position:sticky;
+  top:0;
+  z-index:50;
   background:rgba(247,244,236,0.94);
   backdrop-filter:blur(8px);
   border-bottom:1px solid var(--line);
 }
 
 nav{
-  display:flex; align-items:center; justify-content:space-between;
-  padding:18px 28px; max-width:1040px; margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 28px;
+  max-width:1040px;
+  margin:0 auto;
 }
 
 .mark{
-  display:flex; align-items:center; justify-content:center;
-  width:38px; height:38px; border-radius:8px;
-  background:var(--ink); color:var(--gold);
-  font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem;
-  text-decoration:none; flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  border-radius:8px;
+  background:var(--ink);
+  color:var(--gold);
+  font-family:'DM Serif Display', serif;
+  font-weight:400;
+  font-size:1.05rem;
+  text-decoration:none;
+  flex-shrink:0;
 }
 
-.navlinks{ display:flex; gap:28px; list-style:none; }
-.navlinks a{
-  text-decoration:none; font-size:0.9rem; font-weight:500;
-  color:var(--ink); opacity:0.62; transition:opacity 0.2s;
+.navlinks{
+  display:flex;
+  gap:28px;
+  list-style:none;
 }
-.navlinks a:hover{ opacity:1; }
+
+.navlinks a{
+  text-decoration:none;
+  font-size:0.9rem;
+  font-weight:500;
+  color:var(--ink);
+  opacity:0.62;
+  transition:opacity 0.2s;
+}
+
+.navlinks a:hover{
+  opacity:1;
+}
 
 .nav-cta{
-  background:var(--ink); color:var(--paper);
-  padding:9px 18px; border-radius:6px;
-  font-size:0.86rem; font-weight:600; text-decoration:none; white-space:nowrap;
+  background:var(--ink);
+  color:var(--paper);
+  padding:9px 18px;
+  border-radius:6px;
+  font-size:0.86rem;
+  font-weight:600;
+  text-decoration:none;
+  white-space:nowrap;
 }
-.nav-cta:hover{ background:var(--espresso); }
+
+.nav-cta:hover{
+  background:var(--espresso);
+}
 
 /* ---------- HERO ---------- */
 
@@ -101,11 +171,16 @@ nav{
   overflow:hidden;
 }
 
-.hero-inner{ max-width:1040px; margin:0 auto; position:relative; }
+.hero-inner{
+  max-width:1040px;
+  margin:0 auto;
+  position:relative;
+}
 
 .hero-eyebrow{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.78rem; letter-spacing:0.02em;
+  font-size:0.78rem;
+  letter-spacing:0.02em;
   color:var(--gold);
   margin-bottom:26px;
 }
@@ -113,11 +188,16 @@ nav{
 h1{
   font-size:clamp(2rem, 3.6vw, 2.85rem);
   line-height:1.22;
-  font-weight:500;
+  font-weight:400;
   max-width:19ch;
   margin-bottom:24px;
 }
-h1 em{ font-style:italic; color:var(--gold); font-weight:400; }
+
+h1 em{
+  font-style:italic;
+  color:var(--gold);
+  font-weight:400;
+}
 
 .hero-sub{
   font-size:1.04rem;
@@ -126,188 +206,517 @@ h1 em{ font-style:italic; color:var(--gold); font-weight:400; }
   margin-bottom:36px;
 }
 
-.hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+.hero-ctas{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  align-items:center;
+}
 
 .btn{
-  display:inline-block; text-decoration:none; font-weight:600;
-  font-size:0.9rem; padding:12px 22px; border-radius:6px;
+  display:inline-block;
+  text-decoration:none;
+  font-weight:600;
+  font-size:0.9rem;
+  padding:12px 22px;
+  border-radius:6px;
   transition:transform 0.15s, background 0.2s;
 }
-.btn-primary{ background:var(--gold); color:var(--ink); }
-.btn-primary:hover{ background:var(--gold-dark); }
-.btn-ghost{ border:1.5px solid rgba(247,244,236,0.3); color:var(--paper); }
-.btn-ghost:hover{ border-color:var(--paper); }
-.btn-dark{ background:var(--ink); color:var(--paper); }
-.btn-dark:hover{ background:var(--espresso); }
 
-/* editorial grain texture instead of decorative rings */
+.btn-primary{
+  background:var(--gold);
+  color:var(--ink);
+}
+
+.btn-primary:hover{
+  background:var(--gold-dark);
+}
+
+.btn-ghost{
+  border:1.5px solid rgba(247,244,236,0.3);
+  color:var(--paper);
+}
+
+.btn-ghost:hover{
+  border-color:var(--paper);
+}
+
+.btn-dark{
+  background:var(--ink);
+  color:var(--paper);
+}
+
+.btn-dark:hover{
+  background:var(--espresso);
+}
+
+/* ---------- HERO TEXTURE ---------- */
+
 .hero-texture{
-  position:absolute; right:-60px; top:-40px; bottom:-40px; width:46%;
-  background:
-    linear-gradient(135deg, var(--espresso) 0%, var(--ink) 60%);
-  clip-path: polygon(38% 0, 100% 0, 100% 100%, 12% 100%);
+  position:absolute;
+  right:-60px;
+  top:-40px;
+  bottom:-40px;
+  width:46%;
+  background:linear-gradient(
+    135deg,
+    var(--espresso) 0%,
+    var(--ink) 60%
+  );
+  clip-path:polygon(38% 0, 100% 0, 100% 100%, 12% 100%);
   opacity:0.9;
 }
+
 .hero-texture::after{
   content:"";
-  position:absolute; inset:0;
-  background-image: repeating-linear-gradient(115deg, rgba(176,141,87,0.07) 0px, rgba(176,141,87,0.07) 1px, transparent 1px, transparent 34px);
+  position:absolute;
+  inset:0;
+  background-image:repeating-linear-gradient(
+    115deg,
+    rgba(176,141,87,0.07) 0px,
+    rgba(176,141,87,0.07) 1px,
+    transparent 1px,
+    transparent 34px
+  );
 }
-@media (max-width:980px){ .hero-texture{ display:none; } }
+
+@media (max-width:980px){
+  .hero-texture{
+    display:none;
+  }
+}
 
 /* ---------- SECTIONS ---------- */
 
-section{ padding:84px 0; scroll-margin-top:84px; }
-.section-alt{ background:var(--sand); }
+section{
+  padding:84px 0;
+  scroll-margin-top:84px;
+}
+
+.section-alt{
+  background:var(--sand);
+}
 
 .section-tag{
   font-family:'IBM Plex Mono', monospace;
-  font-size:0.76rem; color:var(--slate);
+  font-size:0.76rem;
+  color:var(--slate);
   margin-bottom:16px;
 }
 
 h2{
   font-size:clamp(1.5rem, 2.3vw, 1.95rem);
-  font-weight:500;
+  font-weight:400;
   max-width:22ch;
   margin-bottom:20px;
   line-height:1.3;
 }
 
-.lede{ font-size:1rem; color:var(--muted); max-width:58ch; margin-bottom:16px; }
+.lede{
+  font-size:1rem;
+  color:var(--muted);
+  max-width:58ch;
+  margin-bottom:16px;
+}
 
-/* ---------- EDITORIAL TWO-COL (alternating) ---------- */
+/* ---------- EDITORIAL TWO-COLUMN ---------- */
 
 .editorial{
-  display:grid; grid-template-columns:1fr 1fr; gap:52px;
-  align-items:start; margin-top:38px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:52px;
+  align-items:start;
+  margin-top:38px;
 }
-.editorial.reverse .editorial-copy{ order:2; }
-.editorial.reverse .editorial-aside{ order:1; }
 
-.editorial-copy p{ color:var(--muted); margin-bottom:14px; font-size:0.98rem; }
+.editorial.reverse .editorial-copy{
+  order:2;
+}
 
-.point-list{ list-style:none; display:flex; flex-direction:column; }
-.point-list li{ padding:18px 0; border-top:1px solid var(--line); }
-.point-list li:last-child{ border-bottom:1px solid var(--line); }
+.editorial.reverse .editorial-aside{
+  order:1;
+}
+
+.editorial-copy p{
+  color:var(--muted);
+  margin-bottom:14px;
+  font-size:0.98rem;
+}
+
+.point-list{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+}
+
+.point-list li{
+  padding:18px 0;
+  border-top:1px solid var(--line);
+}
+
+.point-list li:last-child{
+  border-bottom:1px solid var(--line);
+}
+
 .point-list strong{
-  display:block; font-family:'Fraunces', serif; font-weight:500;
-  font-size:1rem; margin-bottom:4px;
+  display:block;
+  font-family:'DM Serif Display', serif;
+  font-weight:400;
+  font-size:1.05rem;
+  margin-bottom:4px;
 }
-.point-list span{ color:var(--muted); font-size:0.92rem; }
 
-/* ---------- WHY-I-BUILD ---------- */
+.point-list span{
+  color:var(--muted);
+  font-size:0.92rem;
+}
 
-.philosophy{ background:var(--espresso); color:var(--paper); }
-.philosophy .section-tag{ color:var(--gold); }
-.philosophy h2{ color:var(--paper); max-width:none; }
-.philosophy p{ color:rgba(247,244,236,0.72); }
-.philosophy .btn-primary{ margin-top:8px; }
+/* ---------- WHY I BUILD ---------- */
 
-/* ---------- PROCESS: path style (numbered - genuinely sequential) ---------- */
+.philosophy{
+  background:var(--espresso);
+  color:var(--paper);
+}
 
-.path{ margin-top:44px; display:flex; flex-direction:column; }
+.philosophy .section-tag{
+  color:var(--gold);
+}
+
+.philosophy h2{
+  color:var(--paper);
+  max-width:none;
+}
+
+.philosophy p{
+  color:rgba(247,244,236,0.72);
+}
+
+.philosophy .btn-primary{
+  margin-top:8px;
+}
+
+/* ---------- PROCESS ---------- */
+
+.path{
+  margin-top:44px;
+  display:flex;
+  flex-direction:column;
+}
+
 .path-item{
-  display:grid; grid-template-columns:44px 1fr; gap:20px;
-  padding-bottom:34px; position:relative;
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:20px;
+  padding-bottom:34px;
+  position:relative;
 }
+
 .path-item:not(:last-child)::before{
-  content:""; position:absolute; left:21px; top:38px; bottom:0;
-  width:1px; background:var(--line);
+  content:"";
+  position:absolute;
+  left:21px;
+  top:38px;
+  bottom:0;
+  width:1px;
+  background:var(--line);
 }
+
 .path-num{
-  width:34px; height:34px; border-radius:6px;
-  background:var(--ink); color:var(--gold);
-  display:flex; align-items:center; justify-content:center;
-  font-family:'IBM Plex Mono', monospace; font-size:0.78rem; font-weight:500;
+  width:34px;
+  height:34px;
+  border-radius:6px;
+  background:var(--ink);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.78rem;
+  font-weight:500;
   flex-shrink:0;
 }
-.path-item h3{ font-size:1.05rem; margin-bottom:5px; }
-.path-item p{ color:var(--muted); font-size:0.94rem; max-width:52ch; }
+
+.path-item h3{
+  font-size:1.1rem;
+  margin-bottom:5px;
+}
+
+.path-item p{
+  color:var(--muted);
+  font-size:0.94rem;
+  max-width:52ch;
+}
 
 /* ---------- WORK ---------- */
 
-.work-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-top:38px; }
-.work-card{ background:var(--paper); border-radius:8px; overflow:hidden; border:1px solid var(--line); }
-.work-thumb{ height:150px; background:var(--ink); position:relative; }
-.work-thumb.alt{ background:var(--umber); }
-.work-body{ padding:24px; }
-.tag{ display:block; font-family:'IBM Plex Mono', monospace; font-size:0.74rem; color:var(--slate); margin-bottom:10px; }
-.work-body h3{ font-size:1.1rem; margin-bottom:8px; }
-.work-body p{ color:var(--muted); font-size:0.93rem; }
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+  margin-top:38px;
+}
+
+.work-card{
+  background:var(--paper);
+  border-radius:8px;
+  overflow:hidden;
+  border:1px solid var(--line);
+}
+
+.work-thumb{
+  height:150px;
+  background:var(--ink);
+  position:relative;
+}
+
+.work-thumb.alt{
+  background:var(--umber);
+}
+
+.work-body{
+  padding:24px;
+}
+
+.tag{
+  display:block;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:0.74rem;
+  color:var(--slate);
+  margin-bottom:10px;
+}
+
+.work-body h3{
+  font-size:1.15rem;
+  margin-bottom:8px;
+}
+
+.work-body p{
+  color:var(--muted);
+  font-size:0.93rem;
+}
+
+/* ---------- TESTIMONIAL ---------- */
 
 .testimonial-card{
-  background:var(--ink); color:var(--paper);
-  border-radius:10px; padding:40px 44px; margin-top:38px;
+  background:var(--ink);
+  color:var(--paper);
+  border-radius:10px;
+  padding:40px 44px;
+  margin-top:38px;
 }
+
 .testimonial-card blockquote{
-  font-family:'Fraunces', serif; font-style:italic; font-weight:400;
-  font-size:1.15rem; line-height:1.55; max-width:60ch; margin-bottom:18px;
+  font-family:'DM Serif Display', serif;
+  font-style:italic;
+  font-weight:400;
+  font-size:1.15rem;
+  line-height:1.55;
+  max-width:60ch;
+  margin-bottom:18px;
 }
-.testimonial-card cite{ font-size:0.84rem; color:var(--slate); font-style:normal; }
+
+.testimonial-card cite{
+  font-size:0.84rem;
+  color:var(--slate);
+  font-style:normal;
+}
 
 /* ---------- PRICING ---------- */
 
 .price-card{
-  background:var(--paper); border:1.5px solid var(--ink); border-radius:10px;
-  padding:40px; margin-top:36px;
-  display:flex; justify-content:space-between; align-items:center; gap:28px; flex-wrap:wrap;
+  background:var(--paper);
+  border:1.5px solid var(--ink);
+  border-radius:10px;
+  padding:40px;
+  margin-top:36px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:28px;
+  flex-wrap:wrap;
 }
-.price-card h3{ font-size:1.2rem; margin-bottom:8px; }
-.price-card p{ color:var(--muted); max-width:42ch; font-size:0.95rem; }
+
+.price-card h3{
+  font-size:1.25rem;
+  margin-bottom:8px;
+}
+
+.price-card p{
+  color:var(--muted);
+  max-width:42ch;
+  font-size:0.95rem;
+}
 
 /* ---------- CONTACT ---------- */
 
-.contact-section{ background:var(--ink); color:var(--paper); }
-.contact-inner{ text-align:left; max-width:620px; margin:0 auto; }
-.contact-inner h2{ color:var(--paper); }
-.contact-inner .lede{ color:rgba(247,244,236,0.72); margin:0 0 30px; }
-.contact-inner .section-tag{ color:var(--gold); }
+.contact-section{
+  background:var(--ink);
+  color:var(--paper);
+}
 
-.contact-methods{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:34px; }
+.contact-inner{
+  text-align:left;
+  max-width:620px;
+  margin:0 auto;
+}
+
+.contact-inner h2{
+  color:var(--paper);
+}
+
+.contact-inner .lede{
+  color:rgba(247,244,236,0.72);
+  margin:0 0 30px;
+}
+
+.contact-inner .section-tag{
+  color:var(--gold);
+}
+
+.contact-methods{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:34px;
+}
 
 .contact-form{
-  background:rgba(247,244,236,0.05); border:1px solid rgba(247,244,236,0.14);
-  border-radius:10px; padding:28px; display:flex; flex-direction:column; gap:14px;
+  background:rgba(247,244,236,0.05);
+  border:1px solid rgba(247,244,236,0.14);
+  border-radius:10px;
+  padding:28px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
 }
-.contact-form label{ font-size:0.82rem; font-weight:600; margin-bottom:5px; display:block; }
-.contact-form input, .contact-form textarea{
-  width:100%; padding:11px 13px; border-radius:6px;
+
+.contact-form label{
+  font-size:0.82rem;
+  font-weight:600;
+  margin-bottom:5px;
+  display:block;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  padding:11px 13px;
+  border-radius:6px;
   border:1px solid rgba(247,244,236,0.2);
   background:rgba(247,244,236,0.06);
-  font-family:'Inter', sans-serif; font-size:0.96rem; color:var(--paper);
+  font-family:'Inter', sans-serif;
+  font-size:0.96rem;
+  color:var(--paper);
 }
-.contact-form input::placeholder, .contact-form textarea::placeholder{ color:rgba(247,244,236,0.38); }
-.contact-form input:focus, .contact-form textarea:focus{ outline:none; border-color:var(--gold); }
-.contact-form textarea{ resize:vertical; min-height:100px; }
-.contact-form button{ align-self:flex-start; border:none; cursor:pointer; }
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color:rgba(247,244,236,0.38);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  outline:none;
+  border-color:var(--gold);
+}
+
+.contact-form textarea{
+  resize:vertical;
+  min-height:100px;
+}
+
+.contact-form button{
+  align-self:flex-start;
+  border:none;
+  cursor:pointer;
+}
 
 .form-divider{
-  display:flex; align-items:center; gap:12px; margin:28px 0;
-  color:rgba(247,244,236,0.35); font-size:0.82rem;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:28px 0;
+  color:rgba(247,244,236,0.35);
+  font-size:0.82rem;
 }
-.form-divider::before, .form-divider::after{ content:""; flex:1; height:1px; background:rgba(247,244,236,0.16); }
+
+.form-divider::before,
+.form-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:rgba(247,244,236,0.16);
+}
+
+/* ---------- FOOTER ---------- */
 
 footer{
-  padding:32px 28px; text-align:center; color:var(--muted); font-size:0.82rem;
-  border-top:1px solid var(--line); background:var(--sand);
+  padding:32px 28px;
+  text-align:center;
+  color:var(--muted);
+  font-size:0.82rem;
+  border-top:1px solid var(--line);
+  background:var(--sand);
 }
-.footer-social{ display:flex; justify-content:center; gap:18px; margin-bottom:12px; }
-.footer-social a{ color:var(--muted); text-decoration:none; font-weight:500; font-size:0.82rem; }
-.footer-social a:hover{ color:var(--ink); }
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  margin-bottom:12px;
+}
+
+.footer-social a{
+  color:var(--muted);
+  text-decoration:none;
+  font-weight:500;
+  font-size:0.82rem;
+}
+
+.footer-social a:hover{
+  color:var(--ink);
+}
 
 /* ---------- MOBILE ---------- */
 
 @media (max-width:760px){
-  .editorial{ grid-template-columns:1fr; gap:30px; }
-  .editorial.reverse .editorial-copy{ order:1; }
-  .editorial.reverse .editorial-aside{ order:2; }
-  .work-grid{ grid-template-columns:1fr; }
-  .navlinks{ display:none; }
-  .price-card{ flex-direction:column; align-items:flex-start; }
-  .testimonial-card{ padding:30px 26px; }
-  .contact-form{ padding:22px; }
+
+  .editorial{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .editorial.reverse .editorial-copy{
+    order:1;
+  }
+
+  .editorial.reverse .editorial-aside{
+    order:2;
+  }
+
+  .work-grid{
+    grid-template-columns:1fr;
+  }
+
+  .navlinks{
+    display:none;
+  }
+
+  .price-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .testimonial-card{
+    padding:30px 26px;
+  }
+
+  .contact-form{
+    padding:22px;
+  }
+
 }
+
 </style>
 </head>
 
@@ -315,7 +724,9 @@ footer{
 
 <header>
   <nav>
+
     <a href="#top" class="mark">SJ</a>
+
     <ul class="navlinks">
       <li><a href="#approach">Approach</a></li>
       <li><a href="#why-website">Why a website?</a></li>
@@ -323,79 +734,160 @@ footer{
       <li><a href="#work">How I Work</a></li>
       <li><a href="#pricing">Pricing</a></li>
     </ul>
+
     <a href="#contact" class="nav-cta">Start a project</a>
+
   </nav>
 </header>
 
 <main id="top">
 
   <!-- HERO -->
+
   <section class="hero">
+
     <div class="hero-texture" aria-hidden="true"></div>
+
     <div class="hero-inner">
-      <div class="hero-eyebrow">Freelance web design — Barbados</div>
-      <h1>Websites built around how customers <em>actually behave</em>.</h1>
-      <p class="hero-sub">
-        I design and build sites for Barbadian businesses that want more than a template. 
-        My background is in data analysis and social science, and it shapes how I build: every page is designed around what actually gets your customers to act.
-      </p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-primary">Start a project</a>
-        <a href="#work" class="btn btn-ghost">See how I work</a>
+
+      <div class="hero-eyebrow">
+        Freelance web design — Barbados
       </div>
+
+      <h1>
+        Websites built around how customers
+        <em>actually behave</em>.
+      </h1>
+
+      <p class="hero-sub">
+        I design and build sites for Barbadian businesses that want more than a template.
+        My background is in data analysis and social science, and it shapes how I build:
+        every page is designed around what actually gets your customers to act.
+      </p>
+
+      <div class="hero-ctas">
+
+        <a href="#contact" class="btn btn-primary">
+          Start a project
+        </a>
+
+        <a href="#work" class="btn btn-ghost">
+          See how I work
+        </a>
+
+      </div>
+
     </div>
+
   </section>
 
-  <!-- CREDIBILITY QUOTE -->
+
+  <!-- CREDIBILITY -->
+
   <section id="why-it-matters">
+
     <div class="wrap" style="max-width:660px; margin:0 auto; text-align:left;">
+
       <h2 style="font-style:italic; font-weight:400; font-size:1.4rem; max-width:none;">
         "&hellip;your central authority hub, your credibility anchor, your conversion engine&hellip;"
       </h2>
+
       <p style="font-size:0.88rem; color:var(--muted); margin-bottom:24px;">
-        Hemlock Strategy and Design, <a href="https://hemlockstrategyanddesign.com" target="_blank" rel="noopener" style="text-decoration:underline;">"Are Websites Still Relevant in 2026?"</a>
+
+        Hemlock Strategy and Design,
+
+        <a href="https://hemlockstrategyanddesign.com"
+           target="_blank"
+           rel="noopener"
+           style="text-decoration:underline;">
+
+          "Are Websites Still Relevant in 2026?"
+
+        </a>
+
       </p>
+
       <p class="lede">
-        In Barbados, most businesses run on Instagram and WhatsApp. That's rented
-        space: one hack, one algorithm change, one locked account, and it's gone.
+
+        In Barbados, most businesses run on Instagram and WhatsApp.
+        That's rented space: one hack, one algorithm change, one locked account,
+        and it's gone.
+
         A website is the one part of your brand nobody else can take down.
+
       </p>
+
     </div>
+
   </section>
 
-  <!-- WHY I BUILD THIS WAY -->
+
+  <!-- WHY I BUILD -->
+
   <section class="philosophy">
+
     <div class="wrap" style="max-width:660px; margin:0 auto;">
-      <div class="section-tag">Why I build websites this way</div>
-      <h2 style="font-size:1.55rem;">Most people design a website to look good. I design mine to convert.</h2>
+
+      <div class="section-tag">
+        Why I build websites this way
+      </div>
+
+      <h2 style="font-size:1.55rem;">
+        Most people design a website to look good. I design mine to convert.
+      </h2>
+
       <p style="margin-bottom:16px; font-size:0.98rem;">
+
         The moment someone lands on your page, they're deciding whether to trust
         you or leave. I come from data and social science, and I've spent years
         looking at why people actually do that.
+
       </p>
+
       <p style="margin-bottom:16px; font-size:0.98rem;">
+
         Most small business sites waste that moment: cluttered, slow, no clear
         next step. So before I design anything, I ask what a visitor is actually
         trying to do on that page, and I build around that answer, not around
         what looks good in a mockup.
+
       </p>
+
       <p style="margin-bottom:24px; font-size:0.98rem;">
+
         And there's a bigger reason this matters. Your website is the only thing
         online you actually own. Instagram can lock you out. A failed verification
-        check can wipe years of followers overnight. Your website can't be taken
-        from you, if it's built right.
+        check can wipe years of followers overnight.
+
+        Your website can't be taken from you, if it's built right.
+
       </p>
-      <a href="#contact" class="btn btn-primary">Start a project</a>
+
+      <a href="#contact" class="btn btn-primary">
+        Start a project
+      </a>
+
     </div>
+
   </section>
 
+
   <!-- APPROACH -->
+
   <section id="approach">
+
     <div class="wrap">
+
       <div class="section-tag">My approach</div>
-      <h2>Design decisions, backed by how people behave</h2>
+
+      <h2>
+        Design decisions, backed by how people behave
+      </h2>
+
       <div class="editorial">
+
         <div class="editorial-copy">
+
           <p>
             Most freelance sites are judged on how they look on day one. I design
             mine to keep working after that, built around what a visitor is
@@ -403,187 +895,469 @@ footer{
             booking an appointment, finding a phone number, or trusting a
             business enough to reach out.
           </p>
+
           <p>
             That comes from a background in data and behavioural analysis,
             applied to something more practical: a site that's easy to find
             your way around, loads fast, and gives customers what they came for.
           </p>
+
         </div>
+
         <ul class="point-list editorial-aside">
+
           <li>
             <strong>Built around the visitor, not the sitemap</strong>
-            <span>Every page has one job. I design around that, not around a template's default sections.</span>
+
+            <span>
+              Every page has one job. I design around that, not around a
+              template's default sections.
+            </span>
           </li>
+
           <li>
             <strong>Measurable from day one</strong>
-            <span>Basic tracking set up at launch, so you can see what's actually working, not guess.</span>
+
+            <span>
+              Basic tracking set up at launch, so you can see what's actually
+              working, not guess.
+            </span>
           </li>
+
           <li>
             <strong>Clear, honest communication</strong>
-            <span>Plain updates through the build, no jargon, no vanishing between milestones.</span>
+
+            <span>
+              Plain updates through the build, no jargon, no vanishing between
+              milestones.
+            </span>
           </li>
+
         </ul>
+
       </div>
+
     </div>
+
   </section>
 
+
   <!-- WHY A WEBSITE -->
+
   <section id="why-website" class="section-alt">
+
     <div class="wrap">
-      <div class="section-tag">Why have a website?</div>
-      <h2>Instagram can bring people to your business. A website gives them somewhere to go.</h2>
+
+      <div class="section-tag">
+        Why have a website?
+      </div>
+
+      <h2>
+        Instagram can bring people to your business.
+        A website gives them somewhere to go.
+      </h2>
+
       <div class="editorial reverse">
+
         <ul class="point-list editorial-aside">
+
           <li>
             <strong>You own the space</strong>
-            <span>Your website gives your business a dedicated online presence that isn't dependent on a social feed or algorithm.</span>
+
+            <span>
+              Your website gives your business a dedicated online presence that
+              isn't dependent on a social feed or algorithm.
+            </span>
           </li>
+
           <li>
             <strong>Everything has a place</strong>
-            <span>Services, pricing, booking information, FAQs and your business story can all live in one easy-to-find place.</span>
+
+            <span>
+              Services, pricing, booking information, FAQs and your business
+              story can all live in one easy-to-find place.
+            </span>
           </li>
+
           <li>
             <strong>It helps build trust</strong>
-            <span>A professional website gives potential customers a place to understand who you are before deciding to contact or buy from you.</span>
+
+            <span>
+              A professional website gives potential customers a place to
+              understand who you are before deciding to contact or buy from you.
+            </span>
           </li>
+
           <li>
             <strong>Social media and websites work together</strong>
-            <span>Instagram can capture attention. Your website can turn that attention into an enquiry, booking or sale.</span>
+
+            <span>
+              Instagram can capture attention. Your website can turn that
+              attention into an enquiry, booking or sale.
+            </span>
           </li>
+
         </ul>
+
         <div class="editorial-copy">
+
           <p>
             Social media is valuable for reaching people, building awareness and
             keeping customers engaged. But your Instagram page is still a space
             that exists on someone else's platform.
           </p>
+
           <p>
             If your business relies entirely on social media, important
             information such as your services, prices, contact details and story
             can become difficult for customers to find. Platforms change,
             algorithms change, and accounts can sometimes become inaccessible.
           </p>
+
           <p>
             A website gives your business its own central home online, somewhere
             you control, where customers can always learn about you, explore what
             you offer and take the next step.
           </p>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- PROCESS -->
+
   <section id="process">
+
     <div class="wrap">
-      <div class="section-tag">How a project runs</div>
-      <h2>Four stages, start to launch</h2>
-      <p class="lede">A straightforward process so you always know what's next and what it costs.</p>
+
+      <div class="section-tag">
+        How a project runs
+      </div>
+
+      <h2>
+        Four stages, start to launch
+      </h2>
+
+      <p class="lede">
+        A straightforward process so you always know what's next and what it costs.
+      </p>
 
       <div class="path">
+
         <div class="path-item">
+
           <div class="path-num">01</div>
-          <div><h3>Discover</h3><p>A short call about your business, your customers, and what the site needs to do for you.</p></div>
+
+          <div>
+            <h3>Discover</h3>
+
+            <p>
+              A short call about your business, your customers, and what the
+              site needs to do for you.
+            </p>
+          </div>
+
         </div>
+
+
         <div class="path-item">
+
           <div class="path-num">02</div>
-          <div><h3>Design</h3><p>A layout and look built for your business specifically, sent for your feedback before anything is built.</p></div>
+
+          <div>
+            <h3>Design</h3>
+
+            <p>
+              A layout and look built for your business specifically, sent for
+              your feedback before anything is built.
+            </p>
+          </div>
+
         </div>
+
+
         <div class="path-item">
+
           <div class="path-num">03</div>
-          <div><h3>Build</h3><p>The site gets built, tested on phone and desktop, and checked against what we agreed at the start.</p></div>
+
+          <div>
+            <h3>Build</h3>
+
+            <p>
+              The site gets built, tested on phone and desktop, and checked
+              against what we agreed at the start.
+            </p>
+          </div>
+
         </div>
+
+
         <div class="path-item">
+
           <div class="path-num">04</div>
-          <div><h3>Launch &amp; track</h3><p>Site goes live, basic analytics are switched on, and you get a short walkthrough of how to update it.</p></div>
+
+          <div>
+            <h3>Launch &amp; track</h3>
+
+            <p>
+              Site goes live, basic analytics are switched on, and you get a
+              short walkthrough of how to update it.
+            </p>
+          </div>
+
         </div>
+
       </div>
+
     </div>
+
   </section>
+
 
   <!-- HOW I WORK -->
+
   <section id="work" class="section-alt">
+
     <div class="wrap">
-      <div class="section-tag">How I approach a project</div>
-      <h2>How I'd think through yours</h2>
-      <p class="lede">A look at the questions that shape every build, using two common Barbados business types as examples.</p>
+
+      <div class="section-tag">
+        How I approach a project
+      </div>
+
+      <h2>
+        How I'd think through yours
+      </h2>
+
+      <p class="lede">
+        A look at the questions that shape every build, using two common Barbados
+        business types as examples.
+      </p>
 
       <div class="work-grid">
+
         <div class="work-card">
+
           <div class="work-thumb"></div>
+
           <div class="work-body">
-            <span class="tag">Example — guesthouse site</span>
-            <h3>What does a visitor need first?</h3>
-            <p>Most visitors want availability and price before anything else, so those sit above the founder's story, not below it.</p>
+
+            <span class="tag">
+              Example — guesthouse site
+            </span>
+
+            <h3>
+              What does a visitor need first?
+            </h3>
+
+            <p>
+              Most visitors want availability and price before anything else, so
+              those sit above the founder's story, not below it.
+            </p>
+
           </div>
+
         </div>
+
+
         <div class="work-card">
+
           <div class="work-thumb alt"></div>
+
           <div class="work-body">
-            <span class="tag">Example — local restaurant site</span>
-            <h3>What's the one action?</h3>
-            <p>A menu, a phone number, a way to book: every page gets one clear next step.</p>
+
+            <span class="tag">
+              Example — local restaurant site
+            </span>
+
+            <h3>
+              What's the one action?
+            </h3>
+
+            <p>
+              A menu, a phone number, a way to book: every page gets one clear
+              next step.
+            </p>
+
           </div>
+
         </div>
+
       </div>
+
+    </div>
+
   </section>
+
 
   <!-- PRICING -->
+
   <section id="pricing">
+
     <div class="wrap">
-      <div class="section-tag">Pricing</div>
-      <h2>Project-based, scoped to what you need</h2>
-      <div class="price-card">
-        <div>
-          <h3>Every project is quoted individually</h3>
-          <p>A small business site, a landing page, and a full multi-page build all cost differently, get a fixed quote before any work starts, no surprises.</p>
-        </div>
-        <a href="#contact" class="btn btn-dark">Get a quote</a>
+
+      <div class="section-tag">
+        Pricing
       </div>
+
+      <h2>
+        Project-based, scoped to what you need
+      </h2>
+
+      <div class="price-card">
+
+        <div>
+
+          <h3>
+            Every project is quoted individually
+          </h3>
+
+          <p>
+            A small business site, a landing page, and a full multi-page build
+            all cost differently. Get a fixed quote before any work starts,
+            with no surprises.
+          </p>
+
+        </div>
+
+        <a href="#contact" class="btn btn-dark">
+          Get a quote
+        </a>
+
+      </div>
+
     </div>
+
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-    <div class="wrap contact-inner">
-      <div class="section-tag">Get in touch</div>
-      <h2>Tell me about your business</h2>
-      <p class="lede">Send a message with what you're looking for, and I'll get back to you with next steps.</p>
 
-      <div class="contact-methods">
-        <a href="mailto:sarahjgj@gmail.com" class="btn btn-primary">Email me</a>
-        <a href="tel:+12462590091" class="btn btn-ghost">Call/Text: (246) 259-0091</a>
+  <!-- CONTACT -->
+
+  <section id="contact" class="contact-section">
+
+    <div class="wrap contact-inner">
+
+      <div class="section-tag">
+        Get in touch
       </div>
 
-      <div class="form-divider">or send a message directly</div>
+      <h2>
+        Tell me about your business
+      </h2>
 
-      <form class="contact-form" action="mailto:sarahjgj@gmail.com" method="post" enctype="text/plain">
+      <p class="lede">
+        Send a message with what you're looking for, and I'll get back to you
+        with next steps.
+      </p>
+
+      <div class="contact-methods">
+
+        <a href="mailto:sarahjgj@gmail.com" class="btn btn-primary">
+          Email me
+        </a>
+
+        <a href="tel:+12462590091" class="btn btn-ghost">
+          Call/Text: (246) 259-0091
+        </a>
+
+      </div>
+
+      <div class="form-divider">
+        or send a message directly
+      </div>
+
+
+      <form
+        class="contact-form"
+        action="mailto:sarahjgj@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+
         <div>
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+
+          <label for="name">
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+          >
+
         </div>
+
+
         <div>
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+
+          <label for="email">
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+          >
+
         </div>
+
+
         <div>
-          <label for="message">Tell me about your business</label>
-          <textarea id="message" name="message" required></textarea>
+
+          <label for="message">
+            Tell me about your business
+          </label>
+
+          <textarea
+            id="message"
+            name="message"
+            required
+          ></textarea>
+
         </div>
-        <button type="submit" class="btn btn-primary">Send message</button>
+
+
+        <button type="submit" class="btn btn-primary">
+          Send message
+        </button>
+
       </form>
+
     </div>
+
   </section>
 
 </main>
 
+
 <footer>
+
   <div class="footer-social">
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-    <a href="mailto:sarahjgj@gmail.com">Email</a>
-    <a href="tel:+12462590091">Phone</a>
+
+    <a href="https://instagram.com/" target="_blank" rel="noopener">
+      Instagram
+    </a>
+
+    <a href="mailto:sarahjgj@gmail.com">
+      Email
+    </a>
+
+    <a href="tel:+12462590091">
+      Phone
+    </a>
+
   </div>
+
   © 2026 SJ Web Design, Barbados
+
 </footer>
 
 </body>
